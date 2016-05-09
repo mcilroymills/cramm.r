@@ -8,10 +8,8 @@ var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
 
-
 // *** routes *** //
 var routes = require('./routes/index.js');
-
 
 // *** express instance *** //
 var app = express();
@@ -28,7 +26,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.get('/', function(req,res,next) {
     res.sendFile(path.join(__dirname, '../client/app', 'index.html'));
 });
-app.use('/', routes);
+app.use('/api', routes);
 
 
 // catch 404 and forward to error handler

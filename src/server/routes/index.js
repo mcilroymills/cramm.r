@@ -3,8 +3,6 @@ var router = express.Router();
 var pg = require('pg');
 var queries = require('../db/queries/queries');
 
-
-
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });

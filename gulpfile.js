@@ -14,7 +14,6 @@ var clean = require('gulp-rimraf');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 
-
 /**
  * Config
  */
