@@ -7,27 +7,27 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     knex('decks').insert(
       {
-        name: 'HTTP'
+        name: 'HTTP',
         user_id: 1
       }),
     knex('decks').insert(
       {
-        name: 'CRUD'
+        name: 'CRUD',
         user_id: 1
       }),
     knex('decks').insert(
       {
-        name: 'Technical Definitions'
+        name: 'Technical Definitions',
         user_id: 2
       }),
     knex('decks').insert(
       {
-        name: 'CSS'
+        name: 'CSS',
         user_id: 2
       }),
     knex('decks').insert(
       {
-        name: 'Workflow & Git'
+        name: 'Workflow & Git',
         user_id: 3
       })
   );
