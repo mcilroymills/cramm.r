@@ -1,4 +1,53 @@
-<h1>This is the dashboard!</h1>
-<ul>
-  <li ng-repeat="deck in decks">{{deck.name}}</li>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <!--Main page split 8/12-->
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <a style="color:black"><h1><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Create a New Deck</h1></a>
+          <br>
+          <h3>My Decks</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 my-decks-container" ng-repeat="deck in decks">
+          <div class="my-decks-cover">
+            <span class="spaceHolder"></span>
+            <p class="cover-text">{{deck.question}}</p>
+          </div>
+          <h5>{{deck.name}}</h5>
+        </div>
+      </div>
+    </div>
+    <!--Main page split 4/12-->
+    <div class="col-md-4 notifications-panel">
+      <h3>Notifications</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notification-box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notification-box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notification-box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notification-box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="notification"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

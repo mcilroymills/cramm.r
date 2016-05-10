@@ -12,8 +12,12 @@
   function crudService($http) {
 
     return {
-      getDecksByUser: function (user_id) {
-        return $http.get(URL+'decksbyuser/' + user_id)
+      getDecksByUser: function (user_id, token) {
+        return $http.get(URL + 'decksbyuser/' + user_id, {
+            headers: {
+              'x-access-token': token
+            }
+          })
           .then(function(res){
             return res;
           })

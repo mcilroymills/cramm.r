@@ -5,30 +5,37 @@
   angular.module('myApp')
     .controller('dashboardCtrl', dashboardCtrl);
 
-  dashboardCtrl.$inject = ['$rootScope', '$scope', 'dataService'];
+  dashboardCtrl.$inject = ['$rootScope', '$scope', 'dataService', 'authService'];
 
-  function dashboardCtrl($rootScope, $scope, dataService) {
+  function dashboardCtrl($rootScope, $scope, dataService, authService) {
 
-    var memberId = 3;
+    $rootScope.user = {};
+    $rootScope.loggedIn = true;
+    $rootScope.user.username = JSON.parse(authService.getUserName());
 
-    dataService.getDecksByUser(memberId).then(function(decks){
+    var memberId = authService.getUserID();
+    var token = authService.getUserToken();
+
+
+    dataService.getDecksByUser(memberId, token).then(function(decks){
 
       $scope.decks = [];
 
       var found = false;
 
       //This loop populates $scope.decks w/unique decks
-      for (var i = 0; i < decks.data.length; i++) {
+      for (var i = 0; i < decks.data.data.length; i++) {
         for (var j = 0; j < $scope.decks.length; j++) {
-          if (decks.data[i].deck_id === $scope.decks[j].deck_id) {
+          if (decks.data.data[i].deck_id === $scope.decks[j].deck_id) {
             found = true;
           }
         }
         if (!found) {
-          $scope.decks.push(decks.data[i])
+          $scope.decks.push(decks.data.data[i])
         }
         found = false;
       }
+      console.log($scope.decks);
     })
 
     };

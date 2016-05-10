@@ -1,8 +1,89 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* For Navbar */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2072de;
 }
 
-a {
-  color: #00B7FF;
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: "proxima-nova-soft", "Helvetica Neue", helvetica, sans-serif;
+  font-size: 17px;
 }
+
+ul.topnav li a:hover {background-color: #111;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+/* End Navbar */
+#navbarLogo {
+  font-size: 22px;
+}
+
+/* Center gylphcon w/text */
+.glyphicon {
+  top: 5px;
+}
+
+.my-decks-cover {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  text-align:center
+}
+
+.cover-text {
+  vertical-align: middle;
+  display:inline-block;
+}
+
+.spaceHolder{
+    line-height:200px;
+}
+
+.notifications-panel {
+  border-style: solid 1px black;
+  border-right-style: none;
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+.notification-box {
+  height: 100px;
+  width: 300px;
+  border: 1px solid black;
+}
+

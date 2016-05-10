@@ -11,7 +11,13 @@ router.get('/', function(req, res, next) {
 router.get('/cardsbydeck/:id', function(req, res, next) {
   queries.CardsByDeck(req.params.id)
   .then(function(cards) {
-    res.json(cards);
+    res.status(200).json({
+      status: 'success',
+      data: cards
+    });
+  })
+  .catch(function (err) {
+    return next(err);
   });
 });
 
@@ -19,7 +25,13 @@ router.get('/cardsbydeck/:id', function(req, res, next) {
 router.get('/decksbyuser/:id', function(req, res, next) {
   queries.DecksByUser(req.params.id)
   .then(function(decks) {
-    res.json(decks);
+    res.status(200).json({
+      status: 'success',
+      data: decks
+    });
+  })
+  .catch(function (err) {
+    return next(err);
   });
 });
 

@@ -10,8 +10,8 @@
   function dataService($rootScope, crudService) {
 
     return {
-      getDecksByUser: function(user_id) {
-        return crudService.getDecksByUser(user_id)
+      getDecksByUser: function(user_id, token) {
+        return crudService.getDecksByUser(user_id, token)
           .then(function(decks) {
             return decks;
           });

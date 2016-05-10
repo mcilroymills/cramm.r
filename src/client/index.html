@@ -2,7 +2,7 @@
 <html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title>Flashcard App</title>
+    <title>Cramm.r</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.7/angular-css.min.js" charset="utf-8"></script>
@@ -10,6 +10,13 @@
     <link rel="stylesheet" ng-href="{{css}}">
   </head>
   <body ng-cloak>
+    <header>
+      <ul class="topnav">
+        <li><a id="navbarLogo" href="/#/">Cramm.r</a></li>
+        <li ng-show="loggedIn"><a href="/#/profile">Welcome {{user.username + "!"}}</a></li>
+        <li ng-show="loggedIn"><a href="/#/logout" class="pull-right">Logout</a></li>
+      </ul>
+    </header>
     <div ng-view>
     <!--Angular partials displayed here-->
     </div>
@@ -18,7 +25,11 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/routes.js"></script>
     <script type="text/javascript" src="js/controllers/dashboardCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/loginCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/registerCtrl.js"></script>
     <script type="text/javascript" src="js/services/dataService.js"></script>
     <script type="text/javascript" src="js/services/crudService.js"></script>
+    <script type="text/javascript" src="js/services/authService.js"></script>
+    <script type="text/javascript" src="js/services/authInterceptService.js"></script>
   </body>
 </html>
