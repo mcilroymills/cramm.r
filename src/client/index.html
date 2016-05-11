@@ -14,7 +14,7 @@
       <ul class="topnav">
         <li><a id="navbarLogo" href="/#/">Cramm.r</a></li>
         <li ng-show="loggedIn"><a href="/#/profile">Welcome {{user.username + "!"}}</a></li>
-        <li ng-show="loggedIn"><a href="/#/logout" class="pull-right">Logout</a></li>
+        <li ng-show="loggedIn" ng-click="loggedIn=false"><a href="/#/logout" class="pull-right">Logout</a></li>
       </ul>
     </header>
     <div ng-view>
@@ -27,6 +27,8 @@
     <script type="text/javascript" src="js/controllers/dashboardCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/loginCtrl.js"></script>
     <script type="text/javascript" src="js/controllers/registerCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/showCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/playCtrl.js"></script>
     <script type="text/javascript" src="js/services/dataService.js"></script>
     <script type="text/javascript" src="js/services/crudService.js"></script>
     <script type="text/javascript" src="js/services/authService.js"></script>

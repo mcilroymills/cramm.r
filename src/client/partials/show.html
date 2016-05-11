@@ -1,0 +1,30 @@
+<div class="container">
+  <!--Image and description row-->
+  <div class="row">
+    <div class="col-md-2"></div>
+    <!--Card image-->
+    <div class="col-md-3">
+      <br>
+      <div class="my-decks-cover">
+        <span class="spaceHolder"></span>
+        <p class="cover-text">{{current_deck[0].question}}</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <h1>{{current_deck[0].name}}</h1>
+      <br>
+      <button ng-click="startStudying()" type="button" class="btn btn-secondary">Start Studying!</button>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h3>Questions in this deck:</h3>
+      <ul>
+        <li ng-repeat="card in current_deck"><h4>{{card.question}}</h4></li>
+      </ul>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

@@ -10,10 +10,8 @@
   function loginCtrl($rootScope, $scope, $location, authService) {
     $scope.user = {};
     $scope.login = function() {
-      console.log("user in loginCtrl:", $scope.user)
       authService.login($scope.user)
         .then(function(user) {
-          console.log("user info in loginctrl", user);
           authService.setUserInfo(user);
           //Then redirect user to dashboard after succesful login
           $location.path('/dashboard');

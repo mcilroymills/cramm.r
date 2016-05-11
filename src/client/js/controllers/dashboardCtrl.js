@@ -5,9 +5,9 @@
   angular.module('myApp')
     .controller('dashboardCtrl', dashboardCtrl);
 
-  dashboardCtrl.$inject = ['$rootScope', '$scope', 'dataService', 'authService'];
+  dashboardCtrl.$inject = ['$rootScope', '$scope', '$location', 'dataService', 'authService'];
 
-  function dashboardCtrl($rootScope, $scope, dataService, authService) {
+  function dashboardCtrl($rootScope, $scope, $location, dataService, authService) {
 
     $rootScope.user = {};
     $rootScope.loggedIn = true;
@@ -36,7 +36,13 @@
         found = false;
       }
       console.log($scope.decks);
+
+      $scope.showDeck = function (deck_id) {
+        $rootScope.current_deckID = deck_id;
+        $location.path('/show/'+ deck_id);
+      }
     })
+
 
     };
 

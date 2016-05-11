@@ -1,3 +1,8 @@
+/* For ngCloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 /* For Navbar */
 ul.topnav {
   list-style-type: none;
@@ -62,16 +67,36 @@ ul.topnav li.icon {display: none;}
   height: 200px;
   width: 200px;
   border: 1px solid black;
-  text-align:center
+  text-align: center;
 }
 
-.cover-text {
+.cover-text, .question-text, .answer-text {
   vertical-align: middle;
   display:inline-block;
 }
-
+/*this helps center the text vertically on card*/
 .spaceHolder{
-    line-height:200px;
+  line-height:200px;
+}
+
+.question-card {
+  height: 200px;
+  width: 430px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.answer-card {
+  height: 200px;
+  width: 430px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.question-card-spaceHolder {
+  line-height:200px;
 }
 
 .notifications-panel {
@@ -83,7 +108,19 @@ ul.topnav li.icon {display: none;}
 
 .notification-box {
   height: 100px;
-  width: 300px;
+  width: 400px;
   border: 1px solid black;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.notificationSpace{
+  line-height:100px;
+}
+
+.notification-text {
+  vertical-align: middle;
+  display:inline-block;
+  margin: 2px;
 }
 

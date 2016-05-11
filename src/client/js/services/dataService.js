@@ -16,8 +16,8 @@
             return decks;
           });
       },
-      getCardsByDeck: function(deck_id) {
-        return crudService.getCardsByDeck(deck_id)
+      getCardsByDeck: function(deck_id, token) {
+        return crudService.getCardsByDeck(deck_id, token)
           .then(function(cards) {
             return cards;
           });

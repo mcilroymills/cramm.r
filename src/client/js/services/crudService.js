@@ -25,8 +25,12 @@
             return err;
           });
       },
-      getCardsByDeck: function (deck_id) {
-        return $http.get(URL+'cardsbydeck/' + deck_id)
+      getCardsByDeck: function (deck_id, token) {
+        return $http.get(URL+'cardsbydeck/' + deck_id, {
+            headers: {
+              'x-access-token': token
+            }
+          })
           .then(function(res){
             return res;
           })

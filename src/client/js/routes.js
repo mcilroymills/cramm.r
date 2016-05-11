@@ -29,6 +29,18 @@
       restricted: true,
       preventLoggedIn: false
     })
+    .when('/show/:id', {
+      templateUrl: '../partials/show.html',
+      controller: 'showCtrl',
+      restricted: true,
+      preventLoggedIn: false
+    })
+    .when('/play/:deckid/:cardid', {
+      templateUrl: '../partials/play.html',
+      controller: 'playCtrl',
+      restricted: true,
+      preventLoggedIn: false
+    })
     .when('/logout', {
       restricted: false,
       preventLoggedIn: false,

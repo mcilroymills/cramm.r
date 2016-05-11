@@ -13,7 +13,7 @@
       authService.register($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);
-          $location.path('/');
+          $location.path('/dasboard');
           $rootScope.currentUser = authService.getUserInfo();
         })
         .catch(function(err) {
