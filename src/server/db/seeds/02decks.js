@@ -27,6 +27,11 @@ exports.seed = function(knex, Promise) {
       }),
     knex('decks').insert(
       {
+        name: 'Workflow & Git',
+        user_id: 1
+      }),
+    knex('decks').insert(
+      {
         name: 'Technical Definitions',
         user_id: 2
       }),
