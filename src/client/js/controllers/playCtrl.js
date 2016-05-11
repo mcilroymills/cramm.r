@@ -19,9 +19,21 @@
     dataService.getCardsByDeck($routeParams.deckid, token).then(function(cards){
       console.log(cards);
       $rootScope.current_deck = cards.data.data;
+      console.log("current deck", $rootScope.current_deck);
       $scope.current_cardID = $routeParams.cardid;
       $scope.showAnswer = false;
       $rootScope.current_card = $rootScope.current_deck[$scope.current_cardID -1];
+
+      $scope.previouslyAnswered = []
+
+      //Populate previouslyAnswered if current_cardID > 1
+      if ($scope.current_cardID > 1) {
+        for (var i = $scope.current_cardID - 1; i > 0; i--) {
+          $scope.previouslyAnswered.push($rootScope.current_deck[i])
+        }
+      }
+      console.log("previouslyansed",$scope.previouslyAnswered);
+
     });
 
     $scope.nextCard = function () {

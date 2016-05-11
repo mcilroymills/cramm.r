@@ -28,6 +28,19 @@
   </div>
   <!--title previously answered side-->
   <div class='col-md-6'>
-
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{current_deck[0].name}}</h1>
+        <h3>{{current_deck.length - current_cardID}} Questions Remain</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" ng-repeat="card in previouslyAnswered">
+        <div class="my-decks-cover">
+          <span class="spaceHolder"></span>
+          <p class="cover-text">{{card.question}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

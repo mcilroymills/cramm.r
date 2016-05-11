@@ -68,6 +68,7 @@ ul.topnav li.icon {display: none;}
   width: 200px;
   border: 1px solid black;
   text-align: center;
+  margin-top: 15px;
 }
 
 .cover-text, .question-text, .answer-text {
