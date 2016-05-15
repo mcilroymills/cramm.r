@@ -8,13 +8,13 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     knex('users').insert(
       {
-        name: 'StudyBunny',
+        name: 'Guest',
         email: 'tester1@test.com',
         password: bcrypt.hashSync('test', 10)
       }),
     knex('users').insert(
       {
-        name: 'Brogrammer667',
+        name: 'Guest',
         email: 'tester2@test.com',
         password: bcrypt.hashSync('test', 10)
       }),
