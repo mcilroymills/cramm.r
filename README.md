@@ -9,4 +9,6 @@ Technical Features:
 
 A Node/Express back-end with a PostgreSQL database.
 An AngularJS front-end.
+Full front-end and back-end authentication.
 Use of sockets (future goal).
+
