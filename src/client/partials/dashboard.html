@@ -11,12 +11,15 @@
         </div>
       </div>
       <div class="row">
+        <p ng-show="!decks.length">No decks! Create a new deck above!</p>
         <div class="col-md-4 my-decks-container" ng-repeat="deck in decks">
-          <div class="my-decks-cover" ng-click="showDeck(deck.deck_id)">
+          <a href="" ng-click="showDeck(deck.deck_id)">
+            <div class="my-decks-cover">
             <span class="spaceHolder"></span>
             <p class="cover-text">{{deck.question}}</p>
-          </div>
-          <h5>{{deck.name}}</h5>
+            </div>
+          </a>
+          <a href="" ng-click="showDeck(deck.deck_id)"><h5>{{deck.name}}</h5></a>
         </div>
       </div>
     </div>

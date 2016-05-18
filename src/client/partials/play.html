@@ -12,17 +12,17 @@
     <!--Answer card-->
     <div class="row">
       <div class="col-md-12">
-        <div class="answer-card">
+        <a href=""><div class="answer-card">
           <span class="question-card-spaceHolder"></span>
           <p class="cover-text" ng-show="showAnswer">{{current_card.answer}}</p>
           <img src="../images/question.png" ng-show="!showAnswer" ng-click="showAnswer=!showAnswer">
-        </div>
+        </div></a>
       </div>
     </div>
     <div class="row">
       <div class="col-md-8 col-sm-8 col-xs-8">
-        <a ng-click="prevCard()" class="pull-left"><h4><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous</h4></a>
-        <a ng-click="nextCard()" class="pull-right"><h4>Next <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></h4></a>
+        <a href="" ng-click="prevCard()" class="pull-left"><h4><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous</h4></a>
+        <a href="" ng-click="nextCard()" class="pull-right"><h4>Next <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></h4></a>
       </div>
     </div>
   </div>
