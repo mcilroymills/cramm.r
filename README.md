@@ -1,4 +1,4 @@
-Live Site URL: https://crammr.herokuapp.com
+Live Site URL: http://crammr.xyz/
 
 Cramm.r
 =======
