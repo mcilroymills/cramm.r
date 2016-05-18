@@ -39,7 +39,6 @@
           });
       },
       createNewDeck: function (deck, cards,token) {
-        console.log("token in crudserv",token);
         return $http.post(URL+'newdeck/', {
             headers: {
               'x-access-token': token,

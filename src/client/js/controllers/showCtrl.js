@@ -17,7 +17,6 @@
     var token = authService.getUserToken();
 
     dataService.getCardsByDeck($routeParams.id, token).then(function(cards){
-      console.log(cards);
       $rootScope.current_deck = cards.data.data;
     });
 

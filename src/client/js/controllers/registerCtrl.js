@@ -26,7 +26,7 @@
     var guestUser = {
       email: "tester1@test.com",
       password: "test"
-    }
+    };
 
     authService.login(guestUser)
       .then(function(user) {
@@ -36,7 +36,7 @@
         $rootScope.currentUser = {
           name: authService.getUserName(),
           id: authService.getUserID()
-        }
+        };
       })
       .catch(function(err) {
         // check status code, send appropriate message

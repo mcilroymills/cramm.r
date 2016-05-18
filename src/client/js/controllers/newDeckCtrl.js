@@ -30,22 +30,16 @@
       //Reset scope card
       $scope.card = {};
       $scope.currentCard++;
-      console.log($scope.cards);
     };
 
     $scope.submitDeck = function () {
       var new_card = new Card($scope.card.question, $scope.card.answer, $scope.card.points);
       //Push final card into cards array
       $scope.cards.push(new_card);
-      console.log($scope.cards);
       $scope.deck.user_id = memberId;
-
-      console.log("deck", $scope.deck);
-      console.log("cards", $scope.cards);
 
       crudService.createNewDeck($scope.deck, $scope.cards, token)
       .then(function(ids) {
-        console.log("ids", ids);
         $location.path('/dashboard');
       })
       .catch(function(err) {
