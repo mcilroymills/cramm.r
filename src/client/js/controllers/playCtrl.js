@@ -24,12 +24,12 @@
       $scope.showAnswer = false;
       $rootScope.current_card = $rootScope.current_deck[$scope.current_cardID -1];
 
-      $scope.previouslyAnswered = []
+      $scope.previouslyAnswered = [];
 
       //Populate previouslyAnswered if current_cardID > 1
       if ($scope.current_cardID > 1) {
         for (var i = $scope.current_cardID - 1; i > 0; i--) {
-          $scope.previouslyAnswered.push($rootScope.current_deck[i])
+          $scope.previouslyAnswered.push($rootScope.current_deck[i]);
         }
       }
       console.log("previouslyansed",$scope.previouslyAnswered);
@@ -41,13 +41,13 @@
         $scope.current_cardID++;
         $location.path('/play/'+ $routeParams.deckid + '/' + $scope.current_cardID);
       }
-    }
+    };
     $scope.prevCard = function () {
       if ($scope.current_cardID > 1) {
         $scope.current_cardID--;
         $location.path('/play/'+ $routeParams.deckid + '/' + $scope.current_cardID);
       }
-    }
-  };
+    };
+  }
 
 })();

@@ -23,9 +23,9 @@
 
     $scope.startStudying = function () {
       $location.path('/play/'+ $routeParams.id + '/1/');
-    }
-
-
     };
+
+
+    }
 
 })();

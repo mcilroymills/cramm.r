@@ -41,6 +41,12 @@
       restricted: true,
       preventLoggedIn: false
     })
+    .when('/newdeck', {
+      templateUrl: '../partials/newDeck.html',
+      controller: 'newDeckCtrl',
+      restricted: true,
+      preventLoggedIn: false
+    })
     .when('/logout', {
       restricted: false,
       preventLoggedIn: false,

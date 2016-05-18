@@ -31,19 +31,18 @@
           }
         }
         if (!found) {
-          $scope.decks.push(decks.data.data[i])
+          $scope.decks.push(decks.data.data[i]);
         }
         found = false;
       }
-      console.log($scope.decks);
 
       $scope.showDeck = function (deck_id) {
         $rootScope.current_deckID = deck_id;
         $location.path('/show/'+ deck_id);
-      }
-    })
+      };
+    });
 
 
-    };
+  }
 
 })();

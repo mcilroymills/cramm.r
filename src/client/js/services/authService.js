@@ -15,7 +15,7 @@
 
   authService.$inject = ['$http', '$window'];
 
-  var URL = '/users/'
+  var URL = '/users/';
 
   function authService($http, $window) {
     var user = {};

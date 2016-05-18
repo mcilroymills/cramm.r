@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Create a New Deck</h1>
+  <br>
+  <form ng-submit="submitDeck()">
+    <fieldset class="form-group">
+      <label for="deckName">Deck Name</label>
+      <input type="text" class="form-control" id="deckName" ng-model="deck.name" required>
+    </fieldset>
+    <hr>
+    <fieldset class="form-group">
+      <h4>Card {{currentCard +1 }}</h4>
+      <br>
+      <label>Question</label>
+      <input type="text" class="form-control" id="deckName" ng-model="card.question" required>
+      <label>Answer</label>
+      <input type="text" class="form-control" id="deckName" ng-model="card.answer" required>
+      <label for="deckName">Points</label>
+      <input type="number" class="form-control" id="deckName" ng-model="card.points" required>
+    </fieldset>
+    <button type="submit" class="btn btn-secondary" ng-click="newCard()">New Card</button>
+    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+  </form>
+</div>

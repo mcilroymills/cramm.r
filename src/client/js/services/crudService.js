@@ -37,9 +37,24 @@
           .catch(function(err){
             return err;
           });
+      },
+      createNewDeck: function (deck, cards,token) {
+        console.log("token in crudserv",token);
+        return $http.post(URL+'newdeck/', {
+            headers: {
+              'x-access-token': token,
+            },
+            deck: deck,
+            cards: cards
+          })
+          .then(function(res){
+            return res;
+          })
+          .catch(function(err){
+            return err;
+          });
       }
     };
-
   }
 
 })();
