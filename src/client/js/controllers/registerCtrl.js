@@ -13,8 +13,8 @@
       authService.register($scope.user)
         .then(function(user) {
           authService.setUserInfo(user);
-          $location.path('/dasboard');
-          $rootScope.currentUser = authService.getUserInfo();
+          $location.path('/dashboard');
+          //$rootScope.currentUser = authService.getUserInfo();
         })
         .catch(function(err) {
           // check status code, send appropriate message
@@ -33,10 +33,10 @@
         authService.setUserInfo(user);
         //Then redirect user to dashboard after succesful login
         $location.path('/dashboard');
-        $rootScope.currentUser = {
+        /*$rootScope.currentUser = {
           name: authService.getUserName(),
           id: authService.getUserID()
-        };
+        };*/
       })
       .catch(function(err) {
         // check status code, send appropriate message

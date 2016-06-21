@@ -15,10 +15,10 @@
           authService.setUserInfo(user);
           //Then redirect user to dashboard after succesful login
           $location.path('/dashboard');
-          $rootScope.currentUser = {
+          /*$rootScope.currentUser = {
             name: authService.getUserName(),
             id: authService.getUserID()
-          };
+          };*/
         })
         .catch(function(err) {
           // check status code, send appropriate message
@@ -36,10 +36,10 @@
           authService.setUserInfo(user);
           //Then redirect user to dashboard after succesful login
           $location.path('/dashboard');
-          $rootScope.currentUser = {
+          /*$rootScope.currentUser = {
             name: authService.getUserName(),
             id: authService.getUserID()
-          }
+          }*/
         })
         .catch(function(err) {
           // check status code, send appropriate message

@@ -46,8 +46,6 @@
       getUserID: function() {
         return $window.localStorage.getItem('user_id');
       }
-
-
     };
   }
 
